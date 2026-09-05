@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="96" fill="#ffffff" stroke="#122A40" stroke-width="6"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#6FA0C4" stroke-width="4"/>
+  <g stroke="#122A40" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M60 95 Q100 130 140 95"/>
+    <path d="M70 100 Q100 118 130 100" stroke="#6FA0C4"/>
+  </g>
+  <line x1="100" y1="50" x2="100" y2="100" stroke="#122A40" stroke-width="4"/>
+  <g fill="#6FA0C4">
+    <ellipse cx="94" cy="62" rx="6" ry="10" transform="rotate(-20 94 62)"/>
+    <ellipse cx="106" cy="62" rx="6" ry="10" transform="rotate(20 106 62)"/>
+    <ellipse cx="92" cy="78" rx="6" ry="10" transform="rotate(-15 92 78)"/>
+    <ellipse cx="108" cy="78" rx="6" ry="10" transform="rotate(15 108 78)"/>
+  </g>
+  <text x="100" y="150" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#122A40">AVIVA</text>
+  <text x="100" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" letter-spacing="1" fill="#122A40">FOODSTUFF TRADING LLC</text>
+</svg>
