@@ -12,12 +12,12 @@ html {
 
 body {
   background-color: #FFFFFF;
-  color: #1D1D1F;
+  color: #122A40;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #2E6BFF;
+  background: #2C6E9E;
   color: #FFFFFF;
 }
 
@@ -41,14 +41,14 @@ body {
   position: absolute;
   inset: -20%;
   background:
-    radial-gradient(45% 55% at 80% 10%, rgba(46,107,255,0.10), transparent 70%),
-    radial-gradient(35% 45% at 15% 95%, rgba(46,107,255,0.06), transparent 70%);
+    radial-gradient(45% 55% at 80% 10%, rgba(44,110,158,0.10), transparent 70%),
+    radial-gradient(35% 45% at 15% 95%, rgba(44,110,158,0.06), transparent 70%);
   z-index: -1;
 }
 
 .manifest-number {
   font-variant-numeric: tabular-nums;
-  color: #2E6BFF;
+  color: #2C6E9E;
 }
 
 a:focus-visible,
@@ -56,7 +56,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #2E6BFF;
+  outline: 2px solid #2C6E9E;
   outline-offset: 2px;
 }
 

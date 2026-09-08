@@ -3,7 +3,7 @@ import { company } from "@/data/company";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-line bg-ink text-paper">
+    <footer className="mt-14 border-t border-line bg-ink text-paper">
       <div className="container-page py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <div className="font-sans tracking-tight text-lg font-semibold">AVIVA Foodstuff Trading</div>

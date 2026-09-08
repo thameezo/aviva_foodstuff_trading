@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="glow-panel">
-        <div className="container-page pt-24 pb-20 md:pt-36 md:pb-28 text-center">
+        <div className="container-page pt-14 pb-10 md:pt-20 md:pb-14 text-center">
           <p className="text-[13px] uppercase tracking-[0.14em] text-accent font-medium mb-5">
             Foodstuff Trading &middot; Ajman, UAE
           </p>
@@ -46,7 +46,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-20 max-w-2xl mx-auto grid grid-cols-3 divide-x divide-line">
+          <div className="mt-12 max-w-2xl mx-auto grid grid-cols-3 divide-x divide-line">
             <div className="px-4">
               <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-ink">{beverages.length}</div>
               <div className="mt-1 text-[13px] text-ink-soft">Beverage lines</div>
@@ -64,8 +64,8 @@ export default function HomePage() {
       </section>
 
       {/* WHAT WE SUPPLY */}
-      <section className="container-page py-24 md:py-32">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+      <section className="container-page py-14 md:py-20">
+        <div className="text-center max-w-2xl mx-auto mb-9">
           <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink">What We Supply</h2>
           <p className="mt-4 text-ink-soft text-lg">
             Three core categories, sourced and supplied through AVIVA&apos;s trading and
@@ -99,8 +99,8 @@ export default function HomePage() {
 
       {/* WHO WE SERVE */}
       <section className="bg-sky">
-        <div className="container-page py-24 md:py-28 text-center">
-          <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink mb-14">Who We Serve</h2>
+        <div className="container-page py-14 md:py-16 text-center">
+          <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink mb-9">Who We Serve</h2>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {[
               "Retailers",
@@ -124,8 +124,8 @@ export default function HomePage() {
       </section>
 
       {/* WHY WORK WITH US */}
-      <section className="container-page py-24 md:py-32">
-        <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink text-center mb-14">
+      <section className="container-page py-14 md:py-20">
+        <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink text-center mb-9">
           Why Work With AVIVA
         </h2>
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
@@ -157,28 +157,28 @@ export default function HomePage() {
 
       {/* PRODUCT RANGE SHOWCASE */}
       <section className="bg-sky">
-        <div className="container-page py-24 md:py-32">
-          <div className="text-center mb-16">
+        <div className="container-page py-14 md:py-20">
+          <div className="text-center mb-10">
             <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink">Product Catalogue</h2>
             <p className="mt-4 text-ink-soft text-lg">A sample of what&apos;s available across every category.</p>
           </div>
 
           <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Featured Beverages</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
             {featuredBeverages.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
 
           <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Popular Snacks</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
             {featuredSnacks.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
 
           <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Featured Confectionery</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-9">
             {featuredChocolates.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
@@ -196,8 +196,8 @@ export default function HomePage() {
       </section>
 
       {/* HOW TO ORDER */}
-      <section className="container-page py-24 md:py-32">
-        <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink text-center mb-14">
+      <section className="container-page py-14 md:py-20">
+        <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink text-center mb-9">
           How to Enquire
         </h2>
         <div className="grid md:grid-cols-4 gap-5 max-w-5xl mx-auto">
@@ -216,8 +216,8 @@ export default function HomePage() {
       </section>
 
       {/* BUSINESS ENQUIRY CTA */}
-      <section className="container-page pb-24 md:pb-32">
-        <div className="glow-panel rounded-card bg-ink text-white py-20 px-8 text-center">
+      <section className="container-page pb-14 md:pb-20">
+        <div className="glow-panel rounded-card bg-ink text-white py-14 px-8 text-center">
           <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold">
             Looking for a Reliable
             <br />
@@ -246,7 +246,7 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT SUMMARY */}
-      <section className="container-page pb-24 md:pb-32">
+      <section className="container-page pb-14 md:pb-20">
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
           <div>
             <h2 className="font-sans tracking-tight text-3xl font-semibold text-ink mb-4">Contact AVIVA</h2>
