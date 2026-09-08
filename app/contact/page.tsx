@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <div className="border border-line bg-white p-6 space-y-5 text-sm mb-8">
+          <div className="rounded-card bg-white shadow-card p-6 space-y-5 text-sm mb-8">
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-1">Company</div>
               <div className="text-ink font-medium">{company.legalName}</div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="border border-line bg-sky p-4 text-xs text-ink-soft">
+          <div className="rounded-card bg-sky p-4 text-xs text-ink-soft">
             <p>
               Google Maps embed placeholder &mdash; add a Google Maps API key in
               <code className="mx-1 px-1 bg-white border border-line">.env.local</code>

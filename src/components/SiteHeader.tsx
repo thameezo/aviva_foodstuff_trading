@@ -14,7 +14,7 @@ const nav = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-line bg-paper/95 backdrop-blur sticky top-0 z-40">
+    <header className="bg-paper/90 backdrop-blur-md sticky top-0 z-40 shadow-[0_1px_0_rgba(18,42,64,0.06)]">
       <div className="container-page flex items-center justify-between h-20 gap-6">
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image src="/logo.svg" alt="AVIVA Foodstuff Trading" width={44} height={44} />
@@ -37,13 +37,13 @@ export function SiteHeader() {
             href={company.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 border border-ink text-ink hover:bg-ink hover:text-paper transition-colors"
+            className="text-sm px-4 py-2 rounded-pill border border-ink text-ink hover:bg-ink hover:text-paper transition-colors"
           >
             WhatsApp Us
           </a>
           <Link
             href="/quote"
-            className="text-sm px-4 py-2 bg-wheat text-ink font-medium hover:bg-wheat-light transition-colors"
+            className="text-sm px-4 py-2 rounded-pill bg-wheat text-ink font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all"
           >
             Request a Quote
           </Link>

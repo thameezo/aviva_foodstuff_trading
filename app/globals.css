@@ -34,6 +34,23 @@ body {
   border-top: 1px solid #DAD3C2;
 }
 
+/* Soft radial glow used behind the hero and CTA panels for depth */
+.glow-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.glow-panel::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(40% 50% at 85% 15%, rgba(192,138,46,0.16), transparent 70%),
+    radial-gradient(35% 45% at 10% 90%, rgba(44,74,102,0.14), transparent 70%);
+  z-index: -1;
+}
+
 .manifest-number {
   font-variant-numeric: tabular-nums;
   color: #C08A2E;

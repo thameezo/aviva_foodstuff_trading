@@ -67,7 +67,7 @@ export default function AboutPage() {
           </section>
         </div>
 
-        <aside className="border border-line bg-white p-6 h-fit text-sm space-y-4">
+        <aside className="rounded-card bg-white shadow-card p-6 h-fit text-sm space-y-4">
           <div>
             <div className="text-xs uppercase tracking-wide text-ink-soft/70">Company</div>
             <div className="text-ink font-medium">{company.legalName}</div>

@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="border-b border-line">
+      <section className="glow-panel">
         <div className="container-page py-20 md:py-28 grid md:grid-cols-5 gap-10 items-end">
           <div className="md:col-span-3">
             <p className="text-xs uppercase tracking-wide text-wheat font-medium mb-4">
@@ -34,26 +34,26 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="px-6 py-3 bg-ink text-paper text-sm font-medium hover:bg-ink-soft transition-colors"
+                className="px-6 py-3 rounded-pill bg-ink text-paper text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-ink-soft transition-all"
               >
                 Explore Products
               </Link>
               <Link
                 href="/quote"
-                className="px-6 py-3 border border-ink text-ink text-sm font-medium hover:bg-wheat hover:border-wheat transition-colors"
+                className="px-6 py-3 rounded-pill border border-ink/20 bg-white text-ink text-sm font-medium shadow-card hover:shadow-card-hover hover:border-wheat transition-all"
               >
                 Request a Quote
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 border border-line bg-white p-6">
+          <div className="md:col-span-2 bg-white rounded-card shadow-card p-6">
             <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-4">Catalogue at a glance</div>
             <ul className="space-y-3 text-sm">
-              <li className="flex justify-between border-b border-line pb-3">
+              <li className="flex justify-between border-b border-line/70 pb-3">
                 <span className="text-ink-soft">Beverages</span>
                 <span className="manifest-number font-medium">{beverages.length} lines</span>
               </li>
-              <li className="flex justify-between border-b border-line pb-3">
+              <li className="flex justify-between border-b border-line/70 pb-3">
                 <span className="text-ink-soft">Chips &amp; Snacks</span>
                 <span className="manifest-number font-medium">{chips.length} lines</span>
               </li>
@@ -73,7 +73,7 @@ export default function HomePage() {
           Three core categories, sourced and supplied through AVIVA&apos;s trading and distribution
           network for the UAE market.
         </p>
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-6">
           <CategoryCard
             index={1}
             name="Beverages"
@@ -99,10 +99,10 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE SERVE */}
-      <section className="border-y border-line bg-sky">
-        <div className="container-page py-16">
+      <section className="container-page pb-4">
+        <div className="rounded-card bg-sky p-10 md:p-14">
           <h2 className="font-serif text-3xl font-semibold text-ink mb-8">Who We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 text-ink-soft text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5 text-ink-soft text-sm">
             {[
               "Retailers",
               "Supermarkets & Groceries",
@@ -113,7 +113,10 @@ export default function HomePage() {
               "Catering Companies",
               "Corporate Buyers"
             ].map((seg) => (
-              <div key={seg} className="ledger-rule pt-3">{seg}</div>
+              <div key={seg} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-wheat shrink-0" />
+                {seg}
+              </div>
             ))}
           </div>
         </div>
@@ -122,7 +125,7 @@ export default function HomePage() {
       {/* WHY WORK WITH US */}
       <section className="container-page py-20">
         <h2 className="font-serif text-3xl font-semibold text-ink mb-10">Why Work With AVIVA</h2>
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
+        <div className="grid md:grid-cols-2 gap-5">
           {[
             {
               title: "Wide Product Selection",
@@ -141,7 +144,7 @@ export default function HomePage() {
               body: "Direct phone, WhatsApp and email lines to AVIVA's sales team for quotations and product information."
             }
           ].map((item) => (
-            <div key={item.title} className="ledger-rule pt-6">
+            <div key={item.title} className="rounded-card bg-white shadow-card p-7">
               <h3 className="font-serif text-xl font-semibold text-ink">{item.title}</h3>
               <p className="mt-2 text-ink-soft text-sm max-w-md">{item.body}</p>
             </div>
@@ -150,8 +153,8 @@ export default function HomePage() {
       </section>
 
       {/* PRODUCT RANGE SHOWCASE */}
-      <section className="bg-sky border-y border-line">
-        <div className="container-page py-20">
+      <section className="container-page pb-4">
+        <div className="rounded-card bg-sky p-8 md:p-14">
           <h2 className="font-serif text-3xl font-semibold text-ink mb-2">Featured Beverages</h2>
           <p className="text-ink-soft mb-8">A sample of what&apos;s available in the beverages category.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
@@ -170,7 +173,7 @@ export default function HomePage() {
 
           <h2 className="font-serif text-3xl font-semibold text-ink mb-2">Featured Confectionery</h2>
           <p className="text-ink-soft mb-8">A sample of what&apos;s available in the chocolates &amp; confectionery category.</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
             {featuredChocolates.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
@@ -179,7 +182,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/products"
-              className="inline-block px-6 py-3 bg-ink text-paper text-sm font-medium hover:bg-ink-soft transition-colors"
+              className="inline-block px-6 py-3 rounded-pill bg-ink text-paper text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-ink-soft transition-all"
             >
               View Full Product Catalogue
             </Link>
@@ -190,14 +193,14 @@ export default function HomePage() {
       {/* HOW TO ORDER */}
       <section className="container-page py-20">
         <h2 className="font-serif text-3xl font-semibold text-ink mb-10">How to Enquire</h2>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-4 gap-5">
           {[
             "Browse Products",
             "Send Your Enquiry",
             "Discuss Requirements",
             "Receive Product Information / Quotation"
           ].map((step, i) => (
-            <div key={step} className="border border-line bg-white p-6">
+            <div key={step} className="rounded-card bg-white shadow-card p-6">
               <span className="text-xs manifest-number font-medium">{String(i + 1).padStart(2, "0")}</span>
               <p className="mt-3 text-ink font-medium text-sm">{step}</p>
             </div>
@@ -206,8 +209,8 @@ export default function HomePage() {
       </section>
 
       {/* BUSINESS ENQUIRY CTA */}
-      <section className="border-y border-line bg-ink text-paper">
-        <div className="container-page py-16 text-center">
+      <section className="container-page pb-20">
+        <div className="glow-panel rounded-card bg-ink text-paper py-16 px-8 text-center">
           <h2 className="font-serif text-3xl font-semibold">Looking for a Reliable Foodstuff Supplier?</h2>
           <p className="mt-3 text-paper/70 max-w-xl mx-auto">
             Request product information or contact AVIVA&apos;s sales team directly.
@@ -215,7 +218,7 @@ export default function HomePage() {
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <Link
               href="/quote"
-              className="px-6 py-3 bg-wheat text-ink text-sm font-medium hover:bg-wheat-light transition-colors"
+              className="px-6 py-3 rounded-pill bg-wheat text-ink text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all"
             >
               Request a Quote
             </Link>
@@ -223,7 +226,7 @@ export default function HomePage() {
               href={company.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-paper/40 text-paper text-sm font-medium hover:bg-paper hover:text-ink transition-colors"
+              className="px-6 py-3 rounded-pill border border-paper/30 text-paper text-sm font-medium hover:bg-paper hover:text-ink transition-colors"
             >
               WhatsApp Us
             </a>
@@ -241,7 +244,7 @@ export default function HomePage() {
             </p>
             <EnquiryButtons />
           </div>
-          <div className="border border-line bg-white p-6 text-sm space-y-3">
+          <div className="rounded-card bg-white shadow-card p-6 text-sm space-y-3">
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70">Address</div>
               <div className="text-ink">{company.addressLine}</div>

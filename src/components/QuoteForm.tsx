@@ -37,7 +37,7 @@ export function QuoteForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-line bg-white p-8 text-center">
+      <div className="rounded-card bg-white shadow-card p-8 text-center">
         <h2 className="font-serif text-xl font-semibold text-ink mb-2">Enquiry sent</h2>
         <p className="text-ink-soft text-sm">
           Thank you &mdash; AVIVA&apos;s sales team will get back to you shortly. You can also
@@ -48,7 +48,7 @@ export function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="border border-line bg-white p-6 md:p-8 space-y-5">
+    <form onSubmit={handleSubmit} className="rounded-card bg-white shadow-card p-6 md:p-8 space-y-5">
       <div className="grid md:grid-cols-2 gap-5">
         <Field label="Full Name" name="fullName" required />
         <Field label="Company Name" name="companyName" required />
@@ -68,7 +68,7 @@ export function QuoteForm() {
         </label>
         <select
           name="productsOfInterest"
-          className="w-full border border-line px-3 py-2 text-sm bg-white"
+          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
           defaultValue={prefilledProduct ? "Other" : ""}
         >
           <option value="" disabled>Select a category</option>
@@ -92,7 +92,7 @@ export function QuoteForm() {
           name="message"
           rows={5}
           defaultValue={prefilledProduct ? `I'd like a quote for: ${prefilledProduct}` : ""}
-          className="w-full border border-line px-3 py-2 text-sm bg-white"
+          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
         />
       </div>
 
@@ -106,7 +106,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="px-6 py-3 bg-wheat text-ink text-sm font-medium hover:bg-wheat-light transition-colors disabled:opacity-60"
+        className="px-6 py-3 rounded-pill bg-wheat text-ink text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Request a Quote"}
       </button>
@@ -138,7 +138,7 @@ function Field({
         name={name}
         required={required}
         placeholder={placeholder}
-        className="w-full border border-line px-3 py-2 text-sm bg-white"
+        className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
       />
     </div>
   );

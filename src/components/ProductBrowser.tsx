@@ -39,7 +39,7 @@ export function ProductBrowser({
             setVisible(PAGE_SIZE);
           }}
           placeholder="Search products by name..."
-          className="w-full md:w-80 border border-line px-4 py-2 text-sm bg-white focus:outline-none"
+          className="w-full md:w-80 rounded-pill border border-line/70 px-4 py-2.5 text-sm bg-white shadow-card focus:outline-none focus:border-wheat"
           aria-label="Search products"
         />
         <div className="flex flex-wrap gap-2">
@@ -50,10 +50,10 @@ export function ProductBrowser({
                 setActiveSub(sub);
                 setVisible(PAGE_SIZE);
               }}
-              className={`text-xs px-3 py-1.5 border transition-colors ${
+              className={`text-xs px-3.5 py-1.5 rounded-pill border transition-colors ${
                 activeSub === sub
                   ? "bg-ink text-paper border-ink"
-                  : "border-line text-ink-soft hover:border-ink"
+                  : "bg-white border-line/70 text-ink-soft hover:border-wheat"
               }`}
             >
               {sub}
@@ -80,7 +80,7 @@ export function ProductBrowser({
         <div className="mt-10 text-center">
           <button
             onClick={() => setVisible((v) => v + PAGE_SIZE)}
-            className="px-6 py-2 border border-ink text-ink text-sm hover:bg-ink hover:text-paper transition-colors"
+            className="px-6 py-2.5 rounded-pill border border-ink text-ink text-sm shadow-card hover:shadow-card-hover hover:bg-ink hover:text-paper transition-all"
           >
             Load more products
           </button>

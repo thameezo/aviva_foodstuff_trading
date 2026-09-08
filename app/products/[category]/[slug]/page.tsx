@@ -76,7 +76,7 @@ export default function ProductDetailPage({
       />
 
       <div className="grid md:grid-cols-2 gap-12">
-        <div className="aspect-square bg-sky border border-line flex items-center justify-center text-ink-soft/40 p-8 text-center">
+        <div className="aspect-square bg-gradient-to-br from-sky to-white rounded-card flex items-center justify-center text-ink-soft/40 p-8 text-center">
           {product.product_name}
         </div>
 

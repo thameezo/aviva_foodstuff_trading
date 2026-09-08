@@ -16,7 +16,7 @@ export function CategoryCard({
   return (
     <Link
       href={href}
-      className="group relative block border border-line bg-white p-8 hover:border-ink transition-colors"
+      className="group relative block bg-white rounded-card p-8 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300"
     >
       <span className="text-xs manifest-number font-medium">{String(index).padStart(2, "0")}</span>
       <h3 className="mt-4 font-serif text-2xl font-semibold text-ink">{name}</h3>

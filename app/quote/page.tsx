@@ -31,7 +31,7 @@ export default function QuotePage() {
           </Suspense>
         </div>
 
-        <aside className="h-fit border border-line bg-sky p-6 text-sm space-y-4">
+        <aside className="h-fit rounded-card bg-sky p-6 text-sm space-y-4">
           <div>
             <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-1">Prefer to talk directly?</div>
             <p className="text-ink-soft mb-4">
