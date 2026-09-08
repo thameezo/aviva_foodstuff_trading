@@ -7,24 +7,21 @@ const nav = [
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/products/beverages", label: "Beverages" },
-  { href: "/products/chips-snacks", label: "Chips & Snacks" },
+  { href: "/products/chips-snacks", label: "Snacks" },
   { href: "/products/chocolates-confectionery", label: "Chocolates" },
   { href: "/contact", label: "Contact" }
 ];
 
 export function SiteHeader() {
   return (
-    <header className="bg-paper/90 backdrop-blur-md sticky top-0 z-40 shadow-[0_1px_0_rgba(18,42,64,0.06)]">
-      <div className="container-page flex items-center justify-between h-20 gap-6">
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <Image src="/logo.svg" alt="AVIVA Foodstuff Trading" width={44} height={44} />
-          <div className="leading-tight">
-            <div className="font-serif font-semibold text-ink text-lg">AVIVA</div>
-            <div className="text-[11px] tracking-wide text-ink-soft uppercase">Foodstuff Trading</div>
-          </div>
+    <header className="bg-paper/80 backdrop-blur-xl sticky top-0 z-40 border-b border-line/70">
+      <div className="container-page flex items-center justify-between h-14 gap-6">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+          <Image src="/logo.svg" alt="AVIVA Foodstuff Trading" width={26} height={26} />
+          <span className="font-sans tracking-tight font-semibold text-ink text-[15px]">AVIVA</span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-6 text-sm text-ink-soft">
+        <nav className="hidden lg:flex items-center gap-7 text-[13px] text-ink-soft">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-ink transition-colors">
               {item.label}
@@ -32,18 +29,18 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <a
             href={company.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded-pill border border-ink text-ink hover:bg-ink hover:text-paper transition-colors"
+            className="hidden md:inline-flex text-[13px] px-4 py-1.5 rounded-pill text-ink-soft hover:text-ink hover:bg-sky transition-colors"
           >
-            WhatsApp Us
+            WhatsApp
           </a>
           <Link
             href="/quote"
-            className="text-sm px-4 py-2 rounded-pill bg-wheat text-ink font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all"
+            className="text-[13px] px-4 py-1.5 rounded-pill bg-accent text-white font-medium hover:bg-accent-light transition-colors"
           >
             Request a Quote
           </Link>

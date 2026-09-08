@@ -9,32 +9,40 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#122A40",
-          soft: "#2C4A66"
+          DEFAULT: "#1D1D1F",
+          soft: "#6E6E73"
         },
-        wheat: {
-          DEFAULT: "#C08A2E",
-          light: "#E0B563"
+        accent: {
+          DEFAULT: "#2E6BFF",
+          light: "#5B8CFF",
+          dim: "#EEF3FF"
         },
-        paper: "#F6F3EC",
-        line: "#DAD3C2",
-        sky: "#E7EEF3",
-        rust: "#9B3B27"
+        paper: "#FFFFFF",
+        line: "#E4E4E7",
+        sky: "#F5F5F7",
+        rust: "#D9432B"
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "Arial", "sans-serif"]
+        sans: [
+          "var(--font-sans)",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ]
       },
       maxWidth: {
         content: "1200px"
       },
       borderRadius: {
-        card: "1.25rem",
+        card: "1.5rem",
         pill: "999px"
       },
       boxShadow: {
-        card: "0 1px 2px rgba(18,42,64,0.04), 0 8px 24px -12px rgba(18,42,64,0.12)",
-        "card-hover": "0 4px 10px rgba(18,42,64,0.06), 0 20px 40px -16px rgba(18,42,64,0.18)"
+        card: "0 1px 2px rgba(29,29,31,0.04), 0 8px 24px -12px rgba(29,29,31,0.10)",
+        "card-hover": "0 4px 10px rgba(29,29,31,0.05), 0 24px 48px -16px rgba(29,29,31,0.16)"
       }
     }
   },

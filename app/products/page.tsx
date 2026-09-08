@@ -20,7 +20,7 @@ export default function ProductsPage() {
     <div className="container-page py-14">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Products" }]} siteUrl={siteUrl} />
 
-      <h1 className="font-serif text-4xl font-semibold text-ink mb-3">Product Catalogue</h1>
+      <h1 className="font-sans tracking-tight text-4xl font-semibold text-ink mb-3">Product Catalogue</h1>
       <p className="text-ink-soft max-w-2xl mb-4">
         {allProducts.length} products across Beverages, Chips &amp; Snacks, and Chocolates &amp;
         Confectionery. Browse by category below, or use search and filters to find a specific item.

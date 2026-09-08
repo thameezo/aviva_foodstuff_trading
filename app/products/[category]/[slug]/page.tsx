@@ -81,10 +81,10 @@ export default function ProductDetailPage({
         </div>
 
         <div>
-          <span className="text-xs uppercase tracking-wide text-wheat font-medium">
+          <span className="text-xs uppercase tracking-wide text-accent font-medium">
             {product.category} &middot; {product.subcategory}
           </span>
-          <h1 className="font-serif text-3xl font-semibold text-ink mt-2 mb-4">
+          <h1 className="font-sans tracking-tight text-3xl font-semibold text-ink mt-2 mb-4">
             {product.product_name}
           </h1>
 
@@ -116,7 +116,7 @@ export default function ProductDetailPage({
 
       {related.length > 0 && (
         <section className="mt-20">
-          <h2 className="font-serif text-2xl font-semibold text-ink mb-6">
+          <h2 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">
             More in {product.subcategory}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">

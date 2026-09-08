@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="container-page py-24 text-center">
-      <h1 className="font-serif text-4xl font-semibold text-ink mb-4">Page not found</h1>
+      <h1 className="font-sans tracking-tight text-4xl font-semibold text-ink mb-4">Page not found</h1>
       <p className="text-ink-soft mb-8">
         The page you&apos;re looking for doesn&apos;t exist. Try browsing the product catalogue instead.
       </p>

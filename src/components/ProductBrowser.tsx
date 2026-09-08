@@ -39,7 +39,7 @@ export function ProductBrowser({
             setVisible(PAGE_SIZE);
           }}
           placeholder="Search products by name..."
-          className="w-full md:w-80 rounded-pill border border-line/70 px-4 py-2.5 text-sm bg-white shadow-card focus:outline-none focus:border-wheat"
+          className="w-full md:w-80 rounded-pill border border-line/70 px-4 py-2.5 text-sm bg-white shadow-card focus:outline-none focus:border-accent"
           aria-label="Search products"
         />
         <div className="flex flex-wrap gap-2">
@@ -53,7 +53,7 @@ export function ProductBrowser({
               className={`text-xs px-3.5 py-1.5 rounded-pill border transition-colors ${
                 activeSub === sub
                   ? "bg-ink text-paper border-ink"
-                  : "bg-white border-line/70 text-ink-soft hover:border-wheat"
+                  : "bg-white border-line/70 text-ink-soft hover:border-accent"
               }`}
             >
               {sub}

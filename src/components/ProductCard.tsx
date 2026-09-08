@@ -15,10 +15,10 @@ export function ProductCard({ product, index }: { product: Product; index?: numb
         <span className="px-4 text-center">{product.product_name}</span>
       </div>
       <div className="p-5 flex flex-col gap-2 flex-1">
-        <span className="text-[11px] uppercase tracking-wide text-wheat font-medium">
+        <span className="text-[11px] uppercase tracking-wide text-accent font-medium">
           {product.subcategory}
         </span>
-        <h3 className="font-serif text-base font-semibold text-ink leading-snug">
+        <h3 className="font-sans tracking-tight text-base font-semibold text-ink leading-snug">
           {product.product_name}
         </h3>
         {product.packaging && (
@@ -27,13 +27,13 @@ export function ProductCard({ product, index }: { product: Product; index?: numb
         <div className="mt-auto pt-3 flex items-center justify-between text-sm">
           <Link
             href={`/products/${categorySlug}/${product.slug}`}
-            className="text-ink underline decoration-line underline-offset-4 hover:decoration-wheat"
+            className="text-ink underline decoration-line underline-offset-4 hover:decoration-accent"
           >
             View Product
           </Link>
           <Link
             href={`/quote?product=${encodeURIComponent(product.product_name)}`}
-            className="text-wheat font-medium hover:text-ink"
+            className="text-accent font-medium hover:text-ink"
           >
             Enquire
           </Link>

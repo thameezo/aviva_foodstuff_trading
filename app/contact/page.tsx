@@ -18,7 +18,7 @@ export default function ContactPage() {
     <div className="container-page py-14">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact" }]} siteUrl={siteUrl} />
 
-      <h1 className="font-serif text-4xl font-semibold text-ink mb-10">Contact Us</h1>
+      <h1 className="font-sans tracking-tight text-4xl font-semibold text-ink mb-10">Contact Us</h1>
 
       <div className="grid md:grid-cols-2 gap-12">
         <div>
@@ -33,15 +33,15 @@ export default function ContactPage() {
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-1">Phone</div>
-              <a href={company.phoneHref} className="text-ink hover:text-wheat">{company.phone}</a>
+              <a href={company.phoneHref} className="text-ink hover:text-accent">{company.phone}</a>
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-1">WhatsApp</div>
-              <a href={company.whatsappHref} className="text-ink hover:text-wheat">{company.whatsapp}</a>
+              <a href={company.whatsappHref} className="text-ink hover:text-accent">{company.whatsapp}</a>
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70 mb-1">Email</div>
-              <a href={company.emailHref} className="text-ink hover:text-wheat">{company.email}</a>
+              <a href={company.emailHref} className="text-ink hover:text-accent">{company.email}</a>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Send an Enquiry</h2>
+          <h2 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-4">Send an Enquiry</h2>
           <Suspense fallback={<div className="h-96" />}>
             <QuoteForm />
           </Suspense>

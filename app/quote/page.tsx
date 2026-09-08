@@ -21,7 +21,7 @@ export default function QuotePage() {
 
       <div className="grid md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
-          <h1 className="font-serif text-4xl font-semibold text-ink mb-3">Request a Quote</h1>
+          <h1 className="font-sans tracking-tight text-4xl font-semibold text-ink mb-3">Request a Quote</h1>
           <p className="text-ink-soft max-w-xl mb-8">
             Tell us what you&apos;re looking for and AVIVA&apos;s sales team will follow up with
             product information and a quotation.
@@ -41,7 +41,7 @@ export default function QuotePage() {
           </div>
           <div className="border-t border-line pt-4">
             <div className="text-xs uppercase tracking-wide text-ink-soft/70">Email</div>
-            <a href={company.emailHref} className="text-ink hover:text-wheat">{company.email}</a>
+            <a href={company.emailHref} className="text-ink hover:text-accent">{company.email}</a>
           </div>
         </aside>
       </div>

@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Source_Serif_4 } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { company } from "@/data/company";
 
-const sans = IBM_Plex_Sans({
+const sans = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans",
-  display: "swap"
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-serif",
   display: "swap"
 });
 
@@ -89,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en" className={sans.variable}>
       <body className="font-sans">
         <script
           type="application/ld+json"

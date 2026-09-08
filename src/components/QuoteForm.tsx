@@ -38,7 +38,7 @@ export function QuoteForm() {
   if (status === "success") {
     return (
       <div className="rounded-card bg-white shadow-card p-8 text-center">
-        <h2 className="font-serif text-xl font-semibold text-ink mb-2">Enquiry sent</h2>
+        <h2 className="font-sans tracking-tight text-xl font-semibold text-ink mb-2">Enquiry sent</h2>
         <p className="text-ink-soft text-sm">
           Thank you &mdash; AVIVA&apos;s sales team will get back to you shortly. You can also
           reach us directly by phone or WhatsApp for a faster response.
@@ -68,7 +68,7 @@ export function QuoteForm() {
         </label>
         <select
           name="productsOfInterest"
-          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
+          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-accent"
           defaultValue={prefilledProduct ? "Other" : ""}
         >
           <option value="" disabled>Select a category</option>
@@ -92,7 +92,7 @@ export function QuoteForm() {
           name="message"
           rows={5}
           defaultValue={prefilledProduct ? `I'd like a quote for: ${prefilledProduct}` : ""}
-          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
+          className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-accent"
         />
       </div>
 
@@ -106,7 +106,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="px-6 py-3 rounded-pill bg-wheat text-ink text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all disabled:opacity-60"
+        className="px-6 py-3 rounded-pill bg-accent text-white text-sm font-medium shadow-card hover:shadow-card-hover hover:bg-accent-light transition-all disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Request a Quote"}
       </button>
@@ -131,14 +131,14 @@ function Field({
     <div>
       <label className="block text-xs uppercase tracking-wide text-ink-soft/70 mb-1">
         {label}
-        {required && <span className="text-wheat"> *</span>}
+        {required && <span className="text-accent"> *</span>}
       </label>
       <input
         type={type}
         name={name}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-wheat"
+        className="w-full rounded-lg border border-line/70 px-3 py-2.5 text-sm bg-white focus:border-accent"
       />
     </div>
   );

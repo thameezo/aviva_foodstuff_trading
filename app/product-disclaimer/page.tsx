@@ -14,7 +14,7 @@ export default function ProductDisclaimerPage() {
   return (
     <div className="container-page py-14 max-w-3xl">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Product Disclaimer" }]} siteUrl={siteUrl} />
-      <h1 className="font-serif text-3xl font-semibold text-ink mb-6">Product Disclaimer</h1>
+      <h1 className="font-sans tracking-tight text-3xl font-semibold text-ink mb-6">Product Disclaimer</h1>
       <div className="text-ink-soft space-y-4 text-sm leading-relaxed">
         <p>
           {company.legalName} is a foodstuff and FMCG trading and distribution company. Products

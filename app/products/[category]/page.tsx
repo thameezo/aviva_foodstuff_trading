@@ -68,7 +68,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
         siteUrl={siteUrl}
       />
 
-      <h1 className="font-serif text-4xl font-semibold text-ink mb-3">{categoryName}</h1>
+      <h1 className="font-sans tracking-tight text-4xl font-semibold text-ink mb-3">{categoryName}</h1>
       <p className="text-ink-soft max-w-2xl mb-10">{content.intro}</p>
 
       <ProductBrowser products={products} subcategories={subcategories} />

@@ -25,7 +25,7 @@ export function EnquiryButtons({
       </a>
       <Link
         href={productName ? `/quote?product=${encodeURIComponent(productName)}` : "/quote"}
-        className="inline-flex items-center justify-center px-5 py-2.5 rounded-pill text-sm bg-wheat text-ink font-medium shadow-card hover:shadow-card-hover hover:bg-wheat-light transition-all"
+        className="inline-flex items-center justify-center px-5 py-2.5 rounded-pill text-sm bg-accent text-white font-medium shadow-card hover:shadow-card-hover hover:bg-accent-light transition-all"
       >
         Request a Quote
       </Link>
