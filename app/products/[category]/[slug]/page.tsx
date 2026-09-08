@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EnquiryButtons } from "@/components/EnquiryButtons";
 import { ProductCard } from "@/components/ProductCard";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { categorySlugToName, company } from "@/data/company";
 import { allProducts, getProductBySlug, getProductsByCategorySlug } from "@/lib/products";
 
@@ -76,8 +78,21 @@ export default function ProductDetailPage({
       />
 
       <div className="grid md:grid-cols-2 gap-12">
-        <div className="aspect-square bg-gradient-to-br from-sky to-white rounded-card flex items-center justify-center text-ink-soft/40 p-8 text-center">
-          {product.product_name}
+        <div className="aspect-square bg-gradient-to-br from-sky to-white rounded-card flex items-center justify-center p-8 relative overflow-hidden">
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.product_name}
+              fill
+              className="object-contain p-10"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className="flex flex-col items-center gap-3 text-ink-soft/35">
+              <CategoryIcon category={product.category} />
+              <span className="text-xs uppercase tracking-wide">Photo coming soon</span>
+            </div>
+          )}
         </div>
 
         <div>

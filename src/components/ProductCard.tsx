@@ -1,18 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Product } from "@/data/types";
 import { categoryNameToSlug } from "@/data/company";
+import { CategoryIcon } from "@/components/CategoryIcon";
 
 export function ProductCard({ product, index }: { product: Product; index?: number }) {
   const categorySlug = categoryNameToSlug[product.category];
   return (
     <div className="group bg-white rounded-card shadow-card hover:shadow-card-hover transition-shadow duration-300 flex flex-col overflow-hidden">
-      <div className="aspect-square bg-gradient-to-br from-sky to-white flex items-center justify-center text-ink-soft/40 text-xs relative">
+      <div className="aspect-square bg-gradient-to-br from-sky to-white flex items-center justify-center relative">
         {typeof index === "number" && (
-          <span className="absolute top-3 left-3 text-[11px] manifest-number font-medium bg-white/70 rounded-full px-2 py-0.5 backdrop-blur-sm">
+          <span className="absolute top-3 left-3 text-[11px] manifest-number font-medium bg-white/70 rounded-full px-2 py-0.5 backdrop-blur-sm z-10">
             {String(index + 1).padStart(3, "0")}
           </span>
         )}
-        <span className="px-4 text-center">{product.product_name}</span>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.product_name}
+            fill
+            className="object-contain p-4"
+            sizes="(max-width: 768px) 50vw, 25vw"
+          />
+        ) : (
+          <div className="flex flex-col items-center gap-2 text-ink-soft/35">
+            <CategoryIcon category={product.category} />
+            <span className="text-[10px] uppercase tracking-wide">Photo coming soon</span>
+          </div>
+        )}
       </div>
       <div className="p-5 flex flex-col gap-2 flex-1">
         <span className="text-[11px] uppercase tracking-wide text-accent font-medium">
