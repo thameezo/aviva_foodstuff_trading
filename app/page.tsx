@@ -64,7 +64,7 @@ export default function HomePage() {
       </section>
 
       {/* WHAT WE SUPPLY */}
-      <section className="container-page py-14 md:py-20">
+      <section className="bg-white container-page py-14 md:py-20">
         <div className="text-center max-w-2xl mx-auto mb-9">
           <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink">What We Supply</h2>
           <p className="mt-4 text-ink-soft text-lg">
@@ -114,12 +114,10 @@ export default function HomePage() {
               "FMCG Distributors",
               "Catering Companies",
               "Corporate Buyers"
-            ].map((seg, i) => (
+            ].map((seg) => (
               <span
                 key={seg}
-                className={`px-5 py-2.5 rounded-pill text-sm shadow-card ${
-                  i % 3 === 0 ? "bg-accent text-white" : "bg-white text-ink"
-                }`}
+                className="px-5 py-2.5 rounded-pill text-sm shadow-card bg-white text-ink"
               >
                 {seg}
               </span>
@@ -153,9 +151,9 @@ export default function HomePage() {
                 body: "Direct phone, WhatsApp and email lines to AVIVA's sales team for quotations and product information."
               }
             ].map((item) => (
-              <div key={item.title} className="rounded-card bg-white/[0.06] border border-white/10 p-8">
-                <h3 className="font-sans tracking-tight text-xl font-semibold text-accent-light">{item.title}</h3>
-                <p className="mt-2.5 text-white/70 text-[15px] leading-relaxed">{item.body}</p>
+              <div key={item.title} className="rounded-card bg-white/[0.08] border border-white/15 p-8">
+                <h3 className="font-sans tracking-tight text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-2.5 text-white/75 text-[15px] leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
