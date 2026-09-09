@@ -17,7 +17,7 @@ export function SiteHeader() {
     <header className="bg-paper/80 backdrop-blur-xl sticky top-0 z-40 border-b border-line/70">
       <div className="container-page flex items-center justify-between h-14 gap-6">
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <Image src="/logo.svg" alt="AVIVA Foodstuff Trading" width={26} height={26} />
+          <Image src="/logo.png" alt="AVIVA Foodstuff Trading" width={30} height={29} />
           <span className="font-sans tracking-tight font-semibold text-ink text-[15px]">AVIVA</span>
         </Link>
 

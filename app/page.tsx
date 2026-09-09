@@ -46,17 +46,17 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 max-w-2xl mx-auto grid grid-cols-3 divide-x divide-line">
-            <div className="px-4">
-              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-ink">{beverages.length}</div>
+          <div className="mt-12 max-w-2xl mx-auto grid grid-cols-3 gap-3">
+            <div className="rounded-card bg-accent-dim px-4 py-5">
+              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-accent">{beverages.length}</div>
               <div className="mt-1 text-[13px] text-ink-soft">Beverage lines</div>
             </div>
-            <div className="px-4">
-              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-ink">{chips.length}</div>
+            <div className="rounded-card bg-accent-dim px-4 py-5">
+              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-accent">{chips.length}</div>
               <div className="mt-1 text-[13px] text-ink-soft">Snack lines</div>
             </div>
-            <div className="px-4">
-              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-ink">{chocolates.length}</div>
+            <div className="rounded-card bg-accent-dim px-4 py-5">
+              <div className="font-sans tracking-tight text-3xl md:text-4xl font-semibold text-accent">{chocolates.length}</div>
               <div className="mt-1 text-[13px] text-ink-soft">Confectionery lines</div>
             </div>
           </div>
@@ -76,6 +76,7 @@ export default function HomePage() {
           <CategoryCard
             index={1}
             name="Beverages"
+            category="Beverages"
             tagline="Soft drinks, juices, energy drinks, dairy drinks, iced tea and sparkling water."
             href="/products/beverages"
             count={beverages.length}
@@ -83,6 +84,7 @@ export default function HomePage() {
           <CategoryCard
             index={2}
             name="Chips & Snacks"
+            category="Chips & Snacks"
             tagline="Potato chips, corn snacks, cheese snacks, popcorn and family packs."
             href="/products/chips-snacks"
             count={chips.length}
@@ -90,6 +92,7 @@ export default function HomePage() {
           <CategoryCard
             index={3}
             name="Chocolates & Confectionery"
+            category="Chocolates & Confectionery"
             tagline="Chocolate, candy, gummies, lollipops, chewing gum, marshmallows and wafers."
             href="/products/chocolates-confectionery"
             count={chocolates.length}
@@ -98,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE SERVE */}
-      <section className="bg-sky">
+      <section className="bg-accent-dim">
         <div className="container-page py-14 md:py-16 text-center">
           <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink mb-9">Who We Serve</h2>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
@@ -111,10 +114,12 @@ export default function HomePage() {
               "FMCG Distributors",
               "Catering Companies",
               "Corporate Buyers"
-            ].map((seg) => (
+            ].map((seg, i) => (
               <span
                 key={seg}
-                className="px-5 py-2.5 rounded-pill bg-white text-ink text-sm shadow-card"
+                className={`px-5 py-2.5 rounded-pill text-sm shadow-card ${
+                  i % 3 === 0 ? "bg-accent text-white" : "bg-white text-ink"
+                }`}
               >
                 {seg}
               </span>
@@ -123,35 +128,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY WORK WITH US */}
-      <section className="container-page py-14 md:py-20">
-        <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-ink text-center mb-9">
-          Why Work With AVIVA
-        </h2>
-        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-          {[
-            {
-              title: "Wide Product Selection",
-              body: "A catalogue spanning beverages, chips & snacks, and chocolates & confectionery, organized for easy browsing by category."
-            },
-            {
-              title: "Business-Focused Supply",
-              body: "A trading and supply model built around retailers, hospitality businesses and wholesale buyers, not individual consumers."
-            },
-            {
-              title: "Convenient Product Enquiries",
-              body: "Browse the full catalogue online and send a quotation request or WhatsApp enquiry in a few clicks."
-            },
-            {
-              title: "Dedicated Customer Communication",
-              body: "Direct phone, WhatsApp and email lines to AVIVA's sales team for quotations and product information."
-            }
-          ].map((item) => (
-            <div key={item.title} className="rounded-card bg-white shadow-card p-8">
-              <h3 className="font-sans tracking-tight text-xl font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2.5 text-ink-soft text-[15px] leading-relaxed">{item.body}</p>
-            </div>
-          ))}
+      {/* WHY WORK WITH US — dark chapter */}
+      <section className="glow-panel bg-ink text-white">
+        <div className="container-page py-14 md:py-20">
+          <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold text-center mb-9">
+            Why Work With AVIVA
+          </h2>
+          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+            {[
+              {
+                title: "Wide Product Selection",
+                body: "A catalogue spanning beverages, chips & snacks, and chocolates & confectionery, organized for easy browsing by category."
+              },
+              {
+                title: "Business-Focused Supply",
+                body: "A trading and supply model built around retailers, hospitality businesses and wholesale buyers, not individual consumers."
+              },
+              {
+                title: "Convenient Product Enquiries",
+                body: "Browse the full catalogue online and send a quotation request or WhatsApp enquiry in a few clicks."
+              },
+              {
+                title: "Dedicated Customer Communication",
+                body: "Direct phone, WhatsApp and email lines to AVIVA's sales team for quotations and product information."
+              }
+            ].map((item) => (
+              <div key={item.title} className="rounded-card bg-white/[0.06] border border-white/10 p-8">
+                <h3 className="font-sans tracking-tight text-xl font-semibold text-accent-light">{item.title}</h3>
+                <p className="mt-2.5 text-white/70 text-[15px] leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -163,21 +170,27 @@ export default function HomePage() {
             <p className="mt-4 text-ink-soft text-lg">A sample of what&apos;s available across every category.</p>
           </div>
 
-          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Featured Beverages</h3>
+          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">
+            <span className="text-accent">01</span> &middot; Featured Beverages
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
             {featuredBeverages.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
 
-          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Popular Snacks</h3>
+          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">
+            <span className="text-accent">02</span> &middot; Popular Snacks
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
             {featuredSnacks.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
             ))}
           </div>
 
-          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">Featured Confectionery</h3>
+          <h3 className="font-sans tracking-tight text-2xl font-semibold text-ink mb-6">
+            <span className="text-accent">03</span> &middot; Featured Confectionery
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-9">
             {featuredChocolates.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} />
@@ -207,9 +220,11 @@ export default function HomePage() {
             "Discuss Requirements",
             "Receive Product Information / Quotation"
           ].map((step, i) => (
-            <div key={step} className="rounded-card bg-sky p-7 text-center">
-              <span className="text-sm manifest-number font-semibold">{String(i + 1).padStart(2, "0")}</span>
-              <p className="mt-3 text-ink font-medium text-[15px]">{step}</p>
+            <div key={step} className="rounded-card bg-white shadow-card p-7 text-center">
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white text-sm font-semibold">
+                {i + 1}
+              </span>
+              <p className="mt-4 text-ink font-medium text-[15px]">{step}</p>
             </div>
           ))}
         </div>
@@ -217,19 +232,19 @@ export default function HomePage() {
 
       {/* BUSINESS ENQUIRY CTA */}
       <section className="container-page pb-14 md:pb-20">
-        <div className="glow-panel rounded-card bg-ink text-white py-14 px-8 text-center">
+        <div className="glow-panel rounded-card bg-accent text-white py-14 px-8 text-center">
           <h2 className="font-sans tracking-tight text-3xl md:text-5xl font-semibold">
             Looking for a Reliable
             <br />
             Foodstuff Supplier?
           </h2>
-          <p className="mt-5 text-white/60 text-lg max-w-xl mx-auto">
+          <p className="mt-5 text-white/75 text-lg max-w-xl mx-auto">
             Request product information or contact AVIVA&apos;s sales team directly.
           </p>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <Link
               href="/quote"
-              className="px-7 py-3 rounded-pill bg-accent text-white text-[15px] font-medium hover:bg-accent-light transition-colors"
+              className="px-7 py-3 rounded-pill bg-ink text-white text-[15px] font-medium hover:bg-ink/85 transition-colors"
             >
               Request a Quote
             </Link>
@@ -237,7 +252,7 @@ export default function HomePage() {
               href={company.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-3 rounded-pill bg-white/10 text-white text-[15px] font-medium hover:bg-white/20 transition-colors"
+              className="px-7 py-3 rounded-pill bg-white text-accent text-[15px] font-medium hover:bg-white/90 transition-colors"
             >
               WhatsApp Us
             </a>
@@ -255,7 +270,7 @@ export default function HomePage() {
             </p>
             <EnquiryButtons />
           </div>
-          <div className="rounded-card bg-sky p-6 text-sm space-y-3">
+          <div className="rounded-card bg-accent-dim p-6 text-sm space-y-3">
             <div>
               <div className="text-xs uppercase tracking-wide text-ink-soft/70">Address</div>
               <div className="text-ink">{company.addressLine}</div>

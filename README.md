@@ -44,12 +44,10 @@ once one is chosen — it drives canonical URLs, the sitemap, and JSON-LD.
 
 ## 3. Important — things to finish before launch
 
-1. **Replace the logo.** `public/logo.svg` is a placeholder redrawn from the brand's visual
-   description (navy/light-blue circular badge, wheat sheaf, "AVIVA / FOODSTUFF TRADING LLC").
-   The real exported logo file was not retrievable in the environment this project was built in
-   — export it from the original source and drop it in as `public/logo.png` (and update the
-   `<Image>` reference in `src/components/SiteHeader.tsx` and the `logo` field in
-   `app/layout.tsx`'s JSON-LD).
+1. **Logo — done.** `public/logo.png` is AVIVA's real logo (used in the header and in the
+   Organization/LocalBusiness JSON-LD in `app/layout.tsx`). `app/icon.png` and
+   `app/apple-icon.png` are sized versions of the same file, auto-detected by Next.js as the
+   browser tab favicon and iOS home-screen icon — no further setup needed.
 2. **Product photography.** Every product card and detail page currently shows a placeholder tile
    with the product name instead of a photo. Add real images to `public/products/` and set the
    `image` field in the relevant entry in `src/data/products/*.ts` (currently `null` for all
